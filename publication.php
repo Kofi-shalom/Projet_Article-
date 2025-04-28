@@ -14,19 +14,22 @@ $articles = [
         "title"=>"Php and POO",
         "content"=>"La programmation orientée objet (POO) est devenue indispensable, oui, mais pourquoi ? Parce qu'elle permet une meilleure organisation de vos projets, facilite la maintenance de votre code, et offre une grande souplesse pour faire évoluer votre logiciel sans avoir à tout réécrire",
         "link"=>"Plus sur le sujet",
-        "url"=> "https://openclassrooms.com/fr/courses/1665806-programmez-en-oriente-objet-en-php/7306872-decouvrez-les-objets-et-les-classes"
+        "url"=> "https://openclassrooms.com/fr/courses/1665806-programmez-en-oriente-objet-en-php/7306872-decouvrez-les-objets-et-les-classes",
+        "created_at"=>"2025-04-28 15:59:06"
     ],   
     [
         "title"=>"Php and Laravel",
         "content"=>"Laravel est un framework web open-source écrit en PHP respectant le principe modèle-vue-contrôleur et entièrement développé en programmation orientée objet. Laravel est distribué sous licence MIT, avec ses sources hébergées sur GitHub",
         "link"=>"Plus sur le sujet",
-        "url"=> "https://fr.wikipedia.org/wiki/Laravel"
+        "url"=> "https://fr.wikipedia.org/wiki/Laravel",
+        "created_at"=>"2025-04-28 16:33:29"
     ],
     [
         "title"=>"Node js",
         "content"=>"Node.js est une plateforme logicielle libre en JavaScript, orientée vers les applications réseau évènementielles hautement concurrentes qui doivent pouvoir monter en charge.",
         "link"=>"Plus sur le sujet",
-        "url"=> "https://fr.wikipedia.org/wiki/Node.js"
+        "url"=> "https://fr.wikipedia.org/wiki/Node.js",
+        "created_at"=>"2025-04-28 16:33:29"
     ],
 ];
 
@@ -44,7 +47,8 @@ $articles = [
                             <th>Titre</th>
                             <th>Description</th>
                             <th>Référence</th>
-                            <th>Url</th>
+                            <th>Date</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
@@ -52,8 +56,13 @@ $articles = [
                             <tr>
                                 <td><?= $value["title"] ?></td>
                                 <td><?= $value["content"] ?></td>
-                                <td><?= $value["link"] ?></td>
-                                <td><?= $value["url"] ?></td>
+                                <td>
+                                <a href=<?= $value["url"]?> target="blank">
+                                        <?=  $value["link"] ?> &raquo;
+                                    </a>
+                                </td>
+                                <td><?= $value["created_at"]?></td>
+                             
                             </tr>
 
                         <?php endforeach ?>
@@ -65,7 +74,8 @@ $articles = [
                             <th>Titre</th>
                             <th>Description</th>
                             <th>Référence</th>
-                            <th>Url</th>
+                            <th>created_at</th>
+                          
                         </tr> 
                         </tr>
                     </tfoot>
