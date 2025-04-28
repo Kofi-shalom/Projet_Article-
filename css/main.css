@@ -96,3 +96,6 @@ footer *{
     text-align: center;
     color: var(--color-text);
 }
+tbody td a{
+    color: #fff;
+}
